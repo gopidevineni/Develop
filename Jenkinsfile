@@ -5,7 +5,7 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: "10", artifactNumToKeepStr: "10"))
     }
     parameters {
-        extendedChoice defaultValue: '', description: 'select the modules', descriptionPropertyValue: '', multiSelectDelimiter: ',', name: 'modulenames', quoteValue: false, saveJSONParameterToFile: False, type: 'PT_MULTI_SELECT', value: 'module-1,module-2', visibleItemCount: 20
+        extendedChoice defaultValue: '', description: 'select the modules', descriptionPropertyValue: '', multiSelectDelimiter: ',', name: 'modulenames', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_MULTI_SELECT', value: 'module-1,module-2', visibleItemCount: 20
     }
     stages {
         stage ('Compile Stage') {
